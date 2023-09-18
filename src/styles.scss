@@ -1,0 +1,26 @@
+@import './theme';
+
+:root {
+  --background-color: var(--background-light);
+  --text-color: var(--text-light);
+}
+
+[data-theme='dark'] {
+  --background-color: var(--background-dark);
+  --background-color: #121212;
+  --text-color: var(--text-dark);
+  --text-color: #ffffff;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+button{
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border: 1px solid #121212;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
