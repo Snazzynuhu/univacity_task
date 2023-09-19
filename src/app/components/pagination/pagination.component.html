@@ -1,0 +1,24 @@
+<ul class="pagination">
+  <li>
+    <a ngClass="less"
+    [class.first]="currentPage === 1"
+     (click)="changePage(currentPage - 1)">
+      <span>&lt;</span>
+    </a>
+  </li>
+  <li *ngFor="let page of getPages()" [class.active]="currentPage === page">
+    <ng-container *ngIf="page === '...'">
+      <span>{{ page }}</span>
+    </ng-container>
+    <ng-container *ngIf="page !== '...'">
+      <a (click)="changePage(page)">{{ page }}</a>
+    </ng-container>
+  </li>
+  <li>
+    <a ngClass="greater"
+    [class.last]="currentPage === totalPages"
+    (click)="changePage(currentPage + 1)">
+      <span>&gt;</span>
+    </a>
+  </li>
+</ul>

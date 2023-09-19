@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ThemeToggleComponent } from './components/theme-toggle/theme-toggle.component';
+import { PaginationComponent } from './components/pagination/pagination.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ThemeToggleComponent
+    ThemeToggleComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,
