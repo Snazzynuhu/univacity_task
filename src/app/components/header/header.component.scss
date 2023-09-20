@@ -1,0 +1,126 @@
+.navbar {
+  padding: 1rem 5rem;
+  // background-color: #333;
+  // color: #fff;
+  height: 12.2rem;
+  margin-bottom: 2rem;
+  // border-bottom: 1px solid grey;
+}
+.sub-nav{
+margin: 3rem auto 0rem;
+display: flex;
+align-items: center;
+justify-content: center;
+ border-bottom: 1px solid rgba(237, 242, 253, 1);
+ border-top: 1px solid rgba(237, 242, 253, 1);
+ padding: 2rem 0;
+&>div{
+  margin-left: 3rem;
+  & p{
+    color: #adadad;
+    text-transform: capitalize;
+font-size: 1.6rem;
+font-weight: 500;
+line-height: 24px;
+letter-spacing: 0.5px;
+text-align: left;
+  }
+  & i{
+    color: rgba(82, 85, 93, 1);
+  }
+}
+}
+.flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.flex.service{
+  width: 52.1rem;
+  height: 2.4rem;
+list-style: none !important;
+text-transform: capitalize;
+margin-left: -50rem;
+& li{
+font-size: 16px;
+font-weight: 600;
+line-height: 24px;
+letter-spacing: 0.5px;
+text-align: left;
+position: relative;
+& i{
+  position: relative;
+  width: 7.43px;
+height: 4.37px;
+top: 0.15em;
+color: rgba(119, 124, 136, 1);
+}
+}
+}
+.flex.icons{
+width: 18rem;
+height: 3.2rem;
+gap: 32px;
+}
+.avatar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & i{
+    margin-left: 1rem;
+    color: rgba(119, 124, 136, 1);
+  }
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.search i {
+  margin-right: 5px;
+}
+
+.search input {
+  border: none;
+  background: transparent;
+  color: #fff;
+}
+
+.avatar img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.fa-stack[data-count]:after{
+  position:absolute;
+  right:0%;
+  top:1%;
+  content: attr(data-count);
+  font-size:30%;
+  padding:.6em;
+  border-radius:50%;
+  line-height:.8em;
+  color: white;
+  background:rgba(255,0,0,.85);
+  text-align:center;
+  min-width: 1em;
+  font-weight:bold;
+}
+
+.fa-stack[data-count]:after{
+  position:absolute;
+  right: 0.7rem;
+  top:1%;
+  content: attr(data-count);
+  font-size:50%;
+  padding:.6em;
+  border-radius:999px;
+  line-height:.75em;
+  color: #fff;
+  background:rgba(255,0,0);
+  border: 1px solid #fff;
+  text-align:center;
+  min-width:2em;
+}
