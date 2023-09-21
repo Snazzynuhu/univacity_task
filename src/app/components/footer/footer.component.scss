@@ -1,0 +1,108 @@
+@import '../../style/mixins.scss';
+@import '../../style/variables.scss';
+
+footer{
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+height: 42.4rem;
+// top: 2385px;
+border: 1px, 0px, 0px, 0px;
+gap: 44px;
+border-top: 1px solid $border-color;
+& .top-content{
+@include flex-center-space-between;
+align-items: flex-start;
+padding: 3rem;
+& div{
+width: 20.2rem;
+& .title{
+font-size: 1.8rem;
+font-weight: 600;
+line-height: 1.6rem;
+letter-spacing: 0.5px;
+text-align: left;
+text-transform: capitalize;
+}
+& ul{
+  gap: 1rem;
+  li{
+    margin-top: 0.8rem;
+    list-style-type: none;
+font-size: 1.6rem;
+font-weight: 500;
+line-height: 2.4rem;
+letter-spacing: 0.5px;
+text-align: left;
+text-transform: capitalize;
+    &.email{
+      color: $primary-color-blue;
+      text-transform: lowercase;
+    }
+  }
+}
+
+
+}
+}
+
+& .middle-content{
+  @include flex-center-space-between;
+  padding: 3rem;
+  border: 1px solid rgba(231, 235, 244, 1);
+  & .left{
+    @include flex-center-space-between;
+    width: 15.7rem;
+height:2.4rem;
+gap: 8px
+  }
+  & .right > ul{
+    @include flex-center-space-between;
+    width: 37.5rem;
+height:2.4rem;
+gap: 4rem;
+list-style-type: none;
+li{
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 2.4rem;
+  letter-spacing: 0.5px;
+  }
+  }
+}
+
+& .bottom-content{
+  @include flex-center-space-between;
+  padding: 3rem;
+  & .left{
+    @include flex-center-space-between;
+    width: 21.3rem;
+height:2.4rem;
+& .country-name{
+font-size: 1.6rem;
+font-weight: 500;
+line-height: 2.4rem;
+letter-spacing: 0.5px;
+text-align: left;
+
+}
+  }
+  & .right > ul{
+    @include flex-center-space-between;
+    width: 39.8rem;
+height:2.4rem;
+gap: 4rem;
+list-style-type: none;
+li{
+font-size: 1.6rem;
+font-weight: 500;
+line-height: 2.4rem;
+letter-spacing: 0.5px;
+text-align: left;
+
+}
+  }
+}
+
+
+}
