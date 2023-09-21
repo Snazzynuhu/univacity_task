@@ -1,10 +1,10 @@
 @import '../../style/variables.scss';
+@import '../../style/mixins.scss';
 
 .navbar {
   padding: 1rem 5rem;
   height: 12.2rem;
   margin-bottom: 2rem;
-  // background-color: $primary-color;
 }
 .sub-nav{
 margin: 3rem auto 0rem;
@@ -31,9 +31,7 @@ text-align: left;
 }
 }
 .flex{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @include flex-center-space-between;
 }
 .flex.service{
   width: 52.1rem;
@@ -63,9 +61,8 @@ height: 3.2rem;
 gap: 32px;
 }
 .avatar{
-  display: flex;
+  @include flex-center-space-between;
   justify-content: center;
-  align-items: center;
   & i{
     margin-left: 1rem;
     color: rgba(119, 124, 136, 1);
