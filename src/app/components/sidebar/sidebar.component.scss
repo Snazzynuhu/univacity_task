@@ -1,0 +1,23 @@
+.sidebar {
+  width: 250px;
+  background-color: #f4f4f4;
+  padding: 10px;
+}
+
+.accordion {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.accordion-title {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.accordion-content {
+  display: none;
+}
+
+.accordion.open .accordion-content {
+  display: block;
+}

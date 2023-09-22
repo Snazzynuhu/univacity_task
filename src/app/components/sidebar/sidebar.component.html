@@ -1,0 +1,27 @@
+<div class="accordion" *ngFor="let accordion of accordions" [ngClass]="{'open': accordion.isOpen}">
+  <div class="accordion-title" (click)="toggleAccordion(accordion)">
+    {{ accordion.title }}
+    <i class="fa" [ngClass]="{'fa-chevron-down': accordion.isOpen, 'fa-chevron-up': !accordion.isOpen}"></i>
+  </div>
+  <div class="accordion-content">
+    <ng-container *ngIf="accordion.items; else rangeField">
+      <ul>
+        <li *ngFor="let item of accordion.items">
+          <label>
+            <input type="checkbox" [(ngModel)]="item.checked" /> {{ item.name }}
+          </label>
+        </li>
+      </ul>
+    </ng-container>
+    <ng-template #rangeField>
+      <input
+        type="range"
+        id="tuitionRange"
+        [min]="accordion?.range?.min"
+        [max]="accordion?.range?.max"
+      />
+      <br>
+      <span>${{ accordion?.range?.min }} --- ${{ accordion?.range?.max }}</span>
+    </ng-template>
+  </div>
+</div>
