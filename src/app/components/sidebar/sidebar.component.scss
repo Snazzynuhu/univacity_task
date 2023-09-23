@@ -2,11 +2,25 @@
   width: 250px;
   background-color: #f4f4f4;
   padding: 10px;
+  z-index: 5;
+  background-color: aqua;
+  width: 256px;
+  height: 1688px;
+  top: 162px;
+  left: 48px;
+  padding: 0px, 8px, 0px, 8px;
+  border-radius: 8px;
+  gap: 20px;
 }
 
 .accordion {
+  position: relative;
+  z-index: 3;
+  background-color: aqua;
   border-bottom: 1px solid #ddd;
-  margin-bottom: 10px;
+  width: 30rem;
+  // margin-bottom: 10px;
+
 }
 
 .accordion-title {
@@ -20,4 +34,34 @@
 
 .accordion.open .accordion-content {
   display: block;
+}
+
+
+.search-wrapper {
+  position: relative;
+  width: 25rem;
+  display: inline-block;
+  border: 1px solid grey;
+  border-radius: 1rem;
+  padding:0.5rem 0.2rem;
+  padding-left: 1rem;
+  &>input{
+    border: none;
+    // margin-left: 1rem;
+  }
+}
+
+.search-wrapper i.fa {
+  margin-right: 1rem;
+  // position: absolute;
+  // left: 10px;
+  // top: 50%;
+  // transform: translateY(-50%);
+}
+.hidden {
+  display: none;
+}
+.see-all{
+  border: none;
+  color: red;
 }

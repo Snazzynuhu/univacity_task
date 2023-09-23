@@ -4,7 +4,11 @@
     <i class="fa" [ngClass]="{'fa-chevron-down': accordion.isOpen, 'fa-chevron-up': !accordion.isOpen}"></i>
   </div>
   <div class="accordion-content">
-    <ng-container *ngIf="accordion.items; else rangeField">
+    <ng-container *ngIf="accordion.items; else rangeField; else countrySection">
+      <div class="search-wrapper">
+        <i class="fa fa-search"></i>
+        <input type="text" [(ngModel)]="searchTerm" placeholder="{{ accordion.searchPlaceholder }}" />
+      </div>
       <ul>
         <li *ngFor="let item of accordion.items">
           <label>
@@ -22,6 +26,46 @@
       />
       <br>
       <span>${{ accordion?.range?.min }} --- ${{ accordion?.range?.max }}</span>
+    </ng-template>
+       <!-- <ng-container *ngIf="accordion.countries">
+      <input type="text" [(ngModel)]="searchTerm" placeholder="{{ accordion.searchPlaceholder }}" />
+      <ul>
+        <li *ngFor="let country of accordion.countries">
+          <label>
+            <input type="checkbox" [(ngModel)]="country.checked" /> {{ country.name }}
+          </label>
+        </li>
+      </ul>
+      <select>
+        <option *ngFor="let option of accordion.seeAllOptions">{{ option }}</option>
+      </select>
+    </ng-container> -->
+    <ng-template #countrySection>
+      <div class="search-wrapper">
+        <i class="fa fa-search"></i>
+        <input type="text" [(ngModel)]="searchTerm" placeholder="{{ accordion.searchPlaceholder }}" />
+      </div>
+      <ul>
+        <li *ngFor="let country of accordion.countries; let i = index" [ngClass]="{'hidden': !showAllCountries && i >= 1}">
+          <label>
+            <input type="checkbox" [(ngModel)]="country.checked" /> {{ country.name }}
+          </label>
+        </li>
+      </ul>
+      <button class="see-all" (click)="toggleAllCountries()">See all countries
+
+        <i class="fa" [ngClass]="{'fa-chevron-down': !showAllCountries, 'fa-chevron-up': showAllCountries}"></i>
+      </button>
+      <!-- <ul *ngIf="showAllCountries">
+        <li *ngFor="let country of accordion.countries">
+          <label>
+            <input type="checkbox" [(ngModel)]="country.checked" /> {{ country.name }}
+          </label>
+        </li>
+      </ul> -->
+      <!-- <select>
+        <option *ngFor="let option of accordion.seeAllOptions">{{ option }}</option>
+      </select> -->
     </ng-template>
   </div>
 </div>
