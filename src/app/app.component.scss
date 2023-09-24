@@ -1,0 +1,10 @@
+@import '../app/style/mixins.scss';
+.main-content
+{
+  @include flex-center-space-between;
+  align-items: flex-start;
+    position: relative;
+    z-index: 5;
+  padding: 10px;
+  left: 48px;
+}

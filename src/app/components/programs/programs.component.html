@@ -1,0 +1,61 @@
+<main>
+  <div class="top">
+    <div class="tabs">
+      <button (click)="selectTab(0)" [class.selected]="selectedTab === 0"> Programs</button>
+      <button (click)="selectTab(1)" [class.selected]="selectedTab === 1"> Saved programs (89)</button>
+      <button (click)="selectTab(2)" [class.selected]="selectedTab === 2"> Applied (29)</button>
+    </div>
+    <div class="view-style">
+    <span>View</span>
+      <img (click)="gridView()" src="../../../assets/univacity_icons/grid-vieww.svg" alt="">
+      <img (click)="listView()" src="../../../assets/univacity_icons/list-vieww.svg" alt="">
+
+    </div>
+  </div>
+
+  <div *ngIf="viewMode === 'grid'" class="card-grid">
+    <div class="card" *ngFor="let program of programs">
+      <img [src]="program.imgUrl" alt="{{ program.name }} Image" class="card-img-top">
+      <div class="card-body">
+
+        <span class="card-title">{{ program.name }}</span>
+        <div class="country-name">
+          <!-- <span *ngIf="program.country == 'SPAIN' ">
+        <img src="../../../assets/univacity_icons/spain_flag.png" alt="" srcset="" width="20%">
+          </span> -->
+          <p class="card-text">{{ program.country }}</p>
+
+        </div>
+        <p class="card-text">{{ program.program }}</p>
+        <p class="card-text">{{ program.delivery }}</p>
+        <p class="card-text">{{ program.start_date }}</p>
+        <p class="card-text">{{ program.language }}</p>
+        <p class="card-text">{{ program.duration }}</p>
+        <p class="card-text">{{ program.tuition }}</p>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div *ngIf="viewMode === 'list'" class="card-list">
+    <div class="card" *ngFor="let program of programs">
+      <img [src]="program.imgUrl" alt="{{ program.name }} Image" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">{{ program.name }}</h5>
+        <div class="country-name">
+          <!-- <img *ngIf="program.country == 'SPAIN'" src="../../../assets/univacity_icons/spain_flag.png" alt="Spain Flag"> -->
+          <p class="card-text">{{ program.country }}</p>
+        </div>
+        <p class="card-text">{{ program.program }}</p>
+        <p class="card-text">{{ program.delivery }}</p>
+        <p class="card-text">{{ program.start_date }}</p>
+        <p class="card-text">{{ program.language }}</p>
+        <p class="card-text">{{ program.duration }}</p>
+        <p class="card-text">{{ program.tuition }}</p>
+      </div>
+    </div>
+  </div>
+
+
+</main>
