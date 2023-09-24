@@ -4,11 +4,11 @@
 .sidebar {
   width: 250px;
   padding: 10px;
-  position: absolute;
+  position: relative;
   z-index: 5;
   width: 256px;
   height: 1688px;
-  top: 162px;
+  // top: 162px;
   left: 48px;
   padding: 0px, 8px, 0px, 8px;
   border-radius: 8px;
@@ -55,6 +55,7 @@ font-weight: 500;
 line-height: 2.4rem;
 letter-spacing: 0.5px;
 text-align: left;
+list-style-type: none;
   }
 }
 

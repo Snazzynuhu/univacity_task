@@ -12,7 +12,7 @@
           <input type="text" [(ngModel)]="searchTerm" placeholder="{{ accordion.searchPlaceholder }}" />
         </div>
         <ul>
-          <li *ngFor="let item of accordion.items; let i = index" [ngClass]="{'hidden': !showAllCountries && i >= 1 && accordion?.seeAllOptions}" >
+          <li *ngFor="let item of accordion.items; let i = index" [ngClass]="{'hidden': !showAllCountries && i >= 3 && accordion?.seeAllOptions}" >
             <label>
               <input type="checkbox" [(ngModel)]="item.checked" /> {{ item.name }}
             </label>
