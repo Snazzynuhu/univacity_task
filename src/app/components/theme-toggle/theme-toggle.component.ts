@@ -7,10 +7,12 @@ import { ThemeService } from 'src/app/theme.service';
   styleUrls: ['./theme-toggle.component.scss']
 })
 export class ThemeToggleComponent {
+  isDarkMode = false;
   constructor(private themeService: ThemeService) {}
 
   toggleTheme() {
     this.themeService.toggleTheme();
+    this.isDarkMode = !this.isDarkMode;
   }
 
 }

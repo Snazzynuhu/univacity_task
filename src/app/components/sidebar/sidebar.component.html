@@ -1,0 +1,38 @@
+<aside class="sidebar">
+  <header>Filter by</header>
+  <div class="accordion" *ngFor="let accordion of accordions" [ngClass]="{'open': accordion.isOpen}">
+    <div class="accordion-title" (click)="toggleAccordion(accordion)">
+      {{ accordion.title | titlecase }}
+      <i class="fa" [ngClass]="{'fa-chevron-up': accordion.isOpen, 'fa-chevron-down': !accordion.isOpen}"></i>
+    </div>
+    <div class="accordion-content">
+      <ng-container *ngIf="accordion.items; else rangeField;">
+        <div class="search-wrapper" *ngIf="accordion?.seeAllOptions">
+          <i class="fa fa-search"></i>
+          <input type="text" [(ngModel)]="searchTerm" placeholder="{{ accordion.searchPlaceholder }}" />
+        </div>
+        <ul>
+          <li *ngFor="let item of accordion.items; let i = index" [ngClass]="{'hidden': !showAllCountries && i >= 3 && accordion?.seeAllOptions}" >
+            <label>
+              <input type="checkbox" [(ngModel)]="item.checked" /> {{ item.name }}
+            </label>
+          </li>
+        </ul>
+        <button *ngIf="accordion?.seeAllOptions" class="see-all" (click)="toggleAllCountries()">{{accordion.seeAllOptions}}
+          <i class="fa" [ngClass]="{'fa-chevron-down': !showAllCountries, 'fa-chevron-up': showAllCountries}"></i>
+        </button>
+      </ng-container>
+      <ng-template #rangeField>
+        <input
+          type="range"
+          id="tuitionRange"
+          [min]="accordion?.range?.min"
+          [max]="accordion?.range?.max"
+        />
+        <br>
+        <span>${{ accordion?.range?.min }} --- ${{ accordion?.range?.max }}</span>
+      </ng-template>
+    </div>
+  </div>
+
+</aside>
