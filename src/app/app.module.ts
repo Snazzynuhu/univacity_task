@@ -11,6 +11,7 @@ import { PaginationComponent } from './components/pagination/pagination.componen
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { ProgramsComponent } from './components/programs/programs.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     PaginationComponent,
     HeaderComponent,
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
+    ProgramsComponent
   ],
   imports: [
     BrowserModule,
