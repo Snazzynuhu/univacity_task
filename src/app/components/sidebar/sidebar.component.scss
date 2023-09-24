@@ -1,9 +1,11 @@
+
+@import '../../style/mixins.scss';
+@import '../../style/variables.scss';
 .sidebar {
   width: 250px;
-  background-color: #f4f4f4;
   padding: 10px;
+  position: absolute;
   z-index: 5;
-  background-color: aqua;
   width: 256px;
   height: 1688px;
   top: 162px;
@@ -11,25 +13,49 @@
   padding: 0px, 8px, 0px, 8px;
   border-radius: 8px;
   gap: 20px;
+  & header{
+font-family: inherit;
+font-size: 2.4rem;
+font-weight: 600;
+line-height: 3.4rem;
+letter-spacing: 0.5px;
+text-align: left;
+margin-bottom: 2rem;
+
+  }
 }
 
 .accordion {
   position: relative;
-  z-index: 3;
-  background-color: aqua;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
   border-bottom: 1px solid #ddd;
-  width: 30rem;
-  // margin-bottom: 10px;
 
 }
 
 .accordion-title {
   font-weight: bold;
   cursor: pointer;
+font-size: 18px;
+font-weight: 600;
+line-height: 26px;
+letter-spacing: 0.5px;
+text-align: left;
+@include flex-center-space-between;
 }
 
 .accordion-content {
   display: none;
+  margin-top: 0.5rem;
+  line-height: 2.5rem;
+  & >ul>li{
+font-family: Neue Haas Grotesk Display Pro;
+font-size: 1.6rem;
+font-weight: 500;
+line-height: 2.4rem;
+letter-spacing: 0.5px;
+text-align: left;
+  }
 }
 
 .accordion.open .accordion-content {
@@ -39,7 +65,7 @@
 
 .search-wrapper {
   position: relative;
-  width: 25rem;
+  width: 23.5rem;
   display: inline-block;
   border: 1px solid grey;
   border-radius: 1rem;
@@ -47,7 +73,6 @@
   padding-left: 1rem;
   &>input{
     border: none;
-    // margin-left: 1rem;
   }
 }
 
@@ -63,5 +88,5 @@
 }
 .see-all{
   border: none;
-  color: red;
+  color: $primary-color-deepred;
 }

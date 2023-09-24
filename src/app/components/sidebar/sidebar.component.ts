@@ -25,18 +25,72 @@ export class SidebarComponent {
       isOpen: false
     },
     {
-      title: 'Country',
+      title: 'country',
       searchPlaceholder: 'Search countries',
-      countries: [
-        { name: 'Country 1', checked: false },
-        { name: 'Country 2', checked: false },
-        { name: 'Country 3', checked: false },
-        { name: 'Country 4', checked: false },
-        { name: 'Country 5', checked: false },
+      items: [
+        { name: 'Angola', checked: false },
+        { name: 'Belgium', checked: false },
+        { name: 'Eygpt', checked: false },
+        { name: 'Finland', checked: false },
+        { name: 'Mexico', checked: false },
       ],
-      seeAllOptions: ['Option 1', 'Option 2', 'Option 3'],
+      seeAllOptions: 'Seel all Countries',
       isOpen: false
-    }
+    },
+    {
+      title: 'institutes',
+      searchPlaceholder: 'Search institutes',
+      items: [
+        { name: 'Columbia University  ', checked: false },
+        { name: ' Brown University ', checked: false },
+        { name: 'European Institute of Innovation', checked: false },
+        { name: 'Harvard University', checked: false },
+        { name: 'New York University', checked: false },
+      ],
+      seeAllOptions: 'Seel all Institutes',
+      isOpen: false
+    },
+    {
+      title: 'languages',
+      searchPlaceholder: 'Search languages',
+      items: [
+        { name: 'Arabic', checked: false },
+        { name: ' Chinese ', checked: false },
+        { name: 'English', checked: false },
+        { name: 'German', checked: false },
+        { name: 'Spanish', checked: false },
+      ],
+      seeAllOptions: 'Seel all languages',
+      isOpen: false
+    },
+    {
+      title: 'level',
+      items: [
+        { name: 'Associate (50)', checked: false },
+        { name: 'Undergraduate (20)', checked: false },
+        { name: 'Post Graduate (120)', checked: false },
+        { name: 'Masters (32)', checked: false },
+        { name: 'PHD (61)', checked: false },
+      ],
+      isOpen: false
+    },
+    {
+      title: 'type',
+      items: [
+        { name: 'Full Time (20)', checked: false },
+        { name: 'Part Time (61)', checked: false }
+      ],
+      isOpen: false
+    },
+    {
+      title: 'duration',
+      items: [
+        { name: ' 6 - 12 Months (20)', checked: false },
+        { name: '1 - 3 Years (61)', checked: false },
+        { name: '3 - 5 Years (182)', checked: false }
+      ],
+      isOpen: false
+    },
   ];
 
   toggleAccordion(accordion: any) {

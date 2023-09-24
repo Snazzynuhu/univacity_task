@@ -1,0 +1,18 @@
+@import '../../style/mixins.scss';
+.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+button {
+  font-size: 24px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  @include flex-center-space-between;
+  justify-content: center;
+  &>span:nth-child(1){
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+  }
+}

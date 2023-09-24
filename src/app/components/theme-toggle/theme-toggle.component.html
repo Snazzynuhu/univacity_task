@@ -1,1 +1,6 @@
-<button (click)="toggleTheme()">Toggle Theme</button>
+<button (click)="toggleTheme()" [ngClass]="{'dark-mode': isDarkMode}">
+  <span>{{isDarkMode ? 'Light Mode' : 'Dark Mode' }}</span>
+  <span *ngIf="isDarkMode">&#9728;</span>
+  <span *ngIf="!isDarkMode">&#9728;</span>
+</button>
+

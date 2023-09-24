@@ -1,5 +1,6 @@
 @import './theme';
 @import url('https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro');
+@import './app/style/variables.scss';
 
 
 
@@ -26,7 +27,7 @@ html {
 }
 
 body {
-  background-color: var(--background-color);
+  background-color: $background-color;
   color: var(--text-color);
   font-size: 1.6rem;
   font-family: 'Neue Haas Grotesk Display Pro', sans-serif;

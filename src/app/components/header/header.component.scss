@@ -29,6 +29,11 @@ text-align: left;
     color: rgba(82, 85, 93, 1);
   }
 }
+& div.dark-mode{
+  position: absolute;
+  top: 8.5rem;
+  right: 3rem;
+}
 }
 .flex{
   @include flex-center-space-between;
